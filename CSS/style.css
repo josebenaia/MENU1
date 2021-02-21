@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'benaia';
+}
+
+html,body{
+    height: 100%;
+}
+
+@font-face{
+    src: url('../FONTS/Righteous-Regular.ttf');
+    font-family: "benaia";
+}
+
+@font-face{
+    src: url('../FONTS/Saira/Saira-Regular.ttf');
+    font-family: "saira";
+}
+
+body{
+    background-color: #2F3645;
+}
+
+/*=============================== header ========================*/
+
+header{
+    width: 100%;
+    background-color: #2F3645;
+    padding: 10px 20px;
+}
+
+
+.navbar{
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 20px;
+}
+
+.logo{
+    width: 150px;
+    height: 90px;
+    background-image: url('../IMAGE/logo2.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.hamburguer{
+    width: 30px;
+    height: 30px;
+
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+
+    position: relative;
+    cursor: pointer;
+
+
+
+    display: none;
+
+}
+
+.hamburguer:after{
+    content: "";
+
+    position: absolute;
+    top: 35%;
+    left: 15%;
+
+    width: 70%;
+    height: 5%;
+    border-radius: 5px;
+
+    background-color: white;
+}
+
+.hamburguer::before{
+    content: "";
+
+    position: absolute;
+    top: 55%;
+    left: 15%;
+
+    width: 70%;
+    height: 5%;
+    border-radius: 5px;
+
+    background-color: white;
+}
+
+
+
+.menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu li{
+    margin-left: 10px;
+}
+
+.menu li a{
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color:#DDDDDD;
+}
+
+.menu li a:hover{
+    color:  #E58227;
+    transition: 0.6s ease;
+}
+
+/*=============================== past1 ========================*/
+
+
+.container{
+    max-width: 1100px;
+    margin:  0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.container-box{
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.box{
+    padding-top: 100px;
+    width: 400px;
+    height: 500px;
+    
+}
+
+
+
+.box{
+    color: #DDDDDD;
+}
+
+.box p{
+    font-family: saira;
+}
+
+.box p:nth-last-of-type(2){
+    color: #E58227;
+    font-family: saira;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.box h1{
+    font-size: 120px;
+}
+
+.btn{
+    margin-top: 30px;
+}
+
+
+.btn  button{
+    width: 140px;
+    height: 50px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: none;
+    margin-left: 10px;
+    background-color: #DDDDDD;
+
+}
+
+.bt3 button{
+    background-color: transparent;
+    border: 3px solid #DDDDDD;
+    color: #DDDDDD;
+    
+}
+
+
+
+.btn  button:hover{
+    background-color: #E58227;
+    transition: 0.7s ease;
+    color: #DDDDDD;
+}
+
+.bt3 button:hover{
+    border: 3px solid #E58227;
+    background-color: transparent;
+    color: #E58227;
+}
+
+.box2{
+    background-image: url('../IMAGE/image-fundo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 500px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:800px){
+
+    .logo{
+        width: 100px;
+    }
+    .navbar{
+        padding: 0 5px;
+    }
+
+    .hamburguer{
+        display: block;
+        z-index: 999;
+    }
+
+    .menu{
+        position: fixed;
+        top: 0;
+        right: -100%;
+
+
+        height: 100vh;
+        background-color:  rgb(66, 65, 85);
+        margin: 0;
+
+        width: 100%;
+        max-width: 250px;
+
+        padding: 100px 20px;
+
+        flex-direction: column;
+
+        transition:  0.6s ease;
+
+    }
+
+    .menu.active{
+
+        right: 0;
+    }
+
+    .container-box{
+        margin: 0 2%;
+        display: block;
+    }
+
+
+
+   .box{
+       margin: 0 auto;
+       width: 100%;
+       text-align: center;
+       padding-top: 20px;
+       height: auto;
+   }
+
+   .box h1{
+       font-size: 70px;
+   }
+
+   .box p{
+       font-size: 12px;
+   }
+
+   .btn button{
+       width: 110px;
+       margin:0;
+       height: 40px;
+       margin: 0 2px;
+   }
+
+   .box2{
+       margin: 20px auto;
+       width: 100%;
+       height: 250px;
+   }
+
+   
+    
+
+}
+
